@@ -2,43 +2,49 @@
 <html lang="zh-CN">
 
 
-
-
-
 <head>
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/avatar.png">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-  <meta name="description" content="">
   <meta name="author" content="Telperion">
-  <meta name="keywords" content="">
-  <title>页面走丢啦~ ~ 水乐之岩</title>
-
-  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.10.2/css/all.min.css"  >
-<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"  >
-<link rel="stylesheet" href="https://cdn.staticfile.org/mdbootstrap/4.8.9/css/mdb.min.css"  >
-<link rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/3.0.1/github-markdown.min.css"  >
+  
+  
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <title>页面走丢啦~ | 水乐之岩</title>
+  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
+<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
+<link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css"  >
+<link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css"  >
 
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
 
 
-
   <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"  >
 
+
+  <link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.min.css"  >
+
 <link rel="stylesheet" href="/css/main.css"  >
-
-
-  <link rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css"  >
-
-
+<script src="/lib/jquery/jquery.min.js" ></script>
+  <style type="text/css">
+    .banner-bg {
+      
+        background-image: url('https://s2.ax1x.com/2020/01/31/13LioF.jpg');
+      
+      background-position: center;
+      background-repeat: repeat-y;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+  </style>
 <meta name="generator" content="Hexo 4.2.0"></head>
 
-
-<body>
+<body class="banner-bg">
   <header style="height: 80vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
@@ -104,48 +110,99 @@
       </ul>
     </div>
   </div>
+
+
 </nav>
 
-    <div class="view intro-2" id="background"
-         style="background: url('https://s2.ax1x.com/2020/01/31/13fTtx.jpg')no-repeat center center;
-           background-size: cover;
-           background-attachment: fixed;">
+    <div class="view intro-2 rgba-black-slight" id="background">
       <div class="full-bg-img">
-        <div class="mask rgba-black-light flex-center">
+        <div class="mask flex-center">
           <div class="container text-center white-text fadeInUp">
             <span class="h2" id="subtitle">
               
             </span>
-
             
           </div>
-
           
         </div>
       </div>
     </div>
   </header>
-
-  <main>
+  <main id="mainContent" class="rgba-black-slight">
     
       
 
-<script>
+<script type="text/javascript">
   function redirect() {
     location.href = "/";
   }
-
-  //setTimeout(redirect, 3000)
+  /* setTimeout(redirect, 3000) */
+  $(document).ready(function(){
+    $(".footer-hitokoto").hide();
+    $(".footer-siteview").hide();
+    $(".footer-beian").hide();
+    $('#background').removeClass("rgba-black-slight");
+    $('#mainContent').removeClass("rgba-black-slight");
+    $('#footerContent').removeClass("rgba-black-slight");
+  });
 </script>
     
   </main>
+  
+<div id="sidebar" class="sidebar-hide">
+  <span class="sidebar-button sidebar-button-shift" id="toggle-sidebar" >
+    <i class="fa fa-arrow-right on" aria-hidden="true"></i>
+  </span>
+  <div class="sidebar-overlay"></div>
+  <div class="sidebar-intrude">
+    <div class="sidebar-avatar">
+      <img src="/img/avatar.png" srcset="/img/avatar.png" alt="avatar"/>
+    </div>
+    <div class="text-center sidebar-about">
+      <p class="h3 sidebar-author">水乐之岩</p>
+      <p class="sidebar-subtitle"></p>
+      
+        <a href="https://github.com" class="h4" target="_blank">
+          <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        &nbsp;&nbsp;
+      
+        <a href="https://twitter.com" class="h4" target="_blank">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+        &nbsp;&nbsp;
+      
+        <a href="mailto:example@example.com" class="h4" target="_blank">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+        </a>
+        &nbsp;&nbsp;
+      
+    </div>
+    <div class="sidebar-friend">
+      <p class="h6 sidebar-friend-title">
+        <span class="sidebar-label-left"><i class="fas fa-user-friends"></i></span>
+        <span class="sidebar-label">友情链接</span>
+      </p>
+      <ul class="list-group">
+        
+          <a href="https://example.com/" target="_blank">
+            <li class="list-group-item">
+              <i class="fas fa-quote-left"></i>&nbsp;
+              friendname
+            </li>
+          </a>
+        
+    </ul>
+    </div>
+  </div>
+</div>
+
 
   
     <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
       <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
     </a>
   
-
   
     <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
      aria-hidden="true">
@@ -169,79 +226,60 @@
   </div>
 </div>
   
-
-  <footer class="mt-5">
+  <div id="footerContent"  class="rgba-black-slight">
+<footer class="pt-5">
   <div class="text-center py-3">
-    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
-    <i class="iconfont icon-love"></i>
-    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
-    <br>
+    <div class="footer-theme">
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener noreferrer">Hexo</a> theme <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener noreferrer">Fluid</a> mod by <a href="https://github.com/qixa/hexo-theme-fluid-mod" target="_blank" rel="nofollow noopener noreferrer">Julydate</a>
+    </div>
 
     
-  
-    <!-- 不蒜子统计PV -->
-    
-    &nbsp;<span id="busuanzi_container_site_pv">总访问量 
-          <span id="busuanzi_value_site_pv"></span> 次</span>&nbsp;
-  
-  
-    <!-- 不蒜子统计UV -->
-    
-    &nbsp;<span id="busuanzi_container_site_uv">总访客数 
-            <span id="busuanzi_value_site_uv"></span> 人</span>&nbsp;
-  
-  <br>
-
-
-
+      <div class="footer-copyright">
+        
+          ©2020&nbsp;Telperion
+        
+        
+      </div>
     
 
-
-    <!-- cnzz Analytics icon -->
+    
+      <div class="footer-siteview">
+        
+          <!-- 不蒜子统计PV -->
+          <span id="busuanzi_container_site_pv" style="display:none">
+              被瞅了<span id="busuanzi_value_site_pv"></span>次
+          </span>
+        
+        
+          <!-- 不蒜子统计UV -->
+          <span id="busuanzi_container_site_uv" style="display:none">
+            |
+            被<span id="busuanzi_value_site_uv"></span>人看爆
+          </span>
+        
+      </div>
     
 
+    
+
+    
+    
   </div>
 </footer>
-
+</div>
 <!-- SCRIPTS -->
-<script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js" ></script>
-<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js" ></script>
-<script src="https://cdn.staticfile.org/mdbootstrap/4.8.9/js/mdb.min.js" ></script>
+<script src="/lib/popper/popper.min.js" ></script>
+<script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
+<script src="/lib/mdbootstrap/js/mdb.min.js" ></script>
 <script src="/js/main.js" ></script>
-
 
   <script src="/js/lazyload.js" ></script>
 
 
-
-
-
-  <script src="https://cdn.staticfile.org/smooth-scroll/16.1.0/smooth-scroll.min.js" ></script>
-
-
-
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
-
 <!-- Plugins -->
 
-
-  
-
-  
-
-  
-
-  
-
-  <!-- cnzz Analytics -->
-  
-
-
-
-  <script src="https://cdn.staticfile.org/prettify/r298/prettify.min.js" ></script>
-  <script>
+  <script src="/lib/prettify/prettify.min.js" ></script>
+  <script type="text/javascript">
     $(document).ready(function () {
       $('pre').addClass('prettyprint  ');
       prettyPrint();
@@ -249,9 +287,8 @@
   </script>
 
 
-
-  <script src="https://cdn.staticfile.org/typed.js/2.0.10/typed.min.js" ></script>
-  <script>
+  <script src="/lib/typed/typed.min.js" ></script>
+  <script type="text/javascript">
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
@@ -269,12 +306,11 @@
   </script>
 
 
-
-  <script src="https://cdn.staticfile.org/anchor-js/4.2.0/anchor.min.js" ></script>
-  <script>
+  <script src="/lib/anchor/anchor.min.js" ></script>
+  <script type="text/javascript">
     anchors.options = {
       placement: "right",
-      visible: "false",
+      visible: "hover",
       
     };
     var el = "h1,h2,h3,h4,h5,h6".split(",");
@@ -286,9 +322,8 @@
   </script>
 
 
-
   <script src="/js/local-search.js" ></script>
-  <script>
+  <script type="text/javascript">
     var path = "/local-search.xml";
     var inputArea = document.querySelector("#local-search-input");
     inputArea.onclick = function () {
@@ -299,27 +334,74 @@
 
 
 
-  <script src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
-  <script>
-    $("#post img:not(.no-zoom img, img[no-zoom])").each(
-      function () {
-        var element = document.createElement("a");
-        $(element).attr("data-fancybox", "images");
-        $(element).attr("href", $(this).attr("src"));
-        $(this).wrap(element);
-      }
-    );
+
+
+  <!-- 首页文章列表随机图片 -->
+  <script type="text/javascript">
+    $("img.image_random").each(function(){
+      
+        var xjhUrl = "//img.xjh.me/random_img.php?return=json";
+      
+      var _this = $(this);
+      $.get(xjhUrl,function(data,status){
+        if(status === "success"){
+          if(data.result === 200){
+            _this[0].src = data.img;
+          }
+        }
+      });
+    });
   </script>
 
 
 
 
+  <script async src="//cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" ></script>
+  
 
 
 
+<!-- Functions -->
+<script type="text/javascript">
+  /* 切换背景 */
+  
+  $("#background").removeClass("banner-bg");
+  $("body").addClass("banner-bg");
+  var postToTopHight = $("#board").offset().top;
+  $(window).scroll(function () {
+    var bgDisplay = false;
+    var scrollHeight = document.body.scrollTop + document.documentElement.scrollTop;
+    bgDisplay = scrollHeight >= postToTopHight;
+    if(bgDisplay) {
+      $('#background').removeClass("rgba-black-slight");
+      $('#mainContent').removeClass("rgba-black-slight");
+      $('#footerContent').removeClass("rgba-black-slight");
+    } else {
+      $('#background').addClass("rgba-black-slight");
+      $('#mainContent').addClass("rgba-black-slight");
+      $('#footerContent').addClass("rgba-black-slight");
+    }
+  });
+  
+</script>
+
+
+  <script type="text/javascript">
+    /*窗口监视*/
+    var originalTitle = document.title;
+    window.onblur = function(){document.title = "我藏好啦~"};
+    window.onfocus = function(){document.title = originalTitle};
+  </script>
 
 
 
+ 
+ 
+ 
+ 
+ 
+ 
 
+  
 </body>
 </html>
