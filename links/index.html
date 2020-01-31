@@ -139,122 +139,6 @@
                 
 
 
-<div class="row links">
-  
-    <div class="card link-card col-lg-4 col-md-6 col-sm-12">
-      <div class="card-body">
-        
-        
-        <a href="https://fluid-dev.github.io/hexo-fluid-docs/" target="_blank" rel="noopener">
-          <h5 class="card-title link-card-title">Fluid Docs</h5>
-          <p class="card-text link-card-text">主题使用指南</p>
-        </a>
-      </div>
-    </div>
-  
-    <div class="card link-card col-lg-4 col-md-6 col-sm-12">
-      <div class="card-body">
-        
-        
-        <a href="https://github.com/qixa/hexo-theme-fluid-mod" target="_blank" rel="noopener">
-          <h5 class="card-title link-card-title">Fluid Repo</h5>
-          <p class="card-text link-card-text">主题 GitHub 仓库</p>
-        </a>
-      </div>
-    </div>
-  
-    <div class="card link-card col-lg-4 col-md-6 col-sm-12">
-      <div class="card-body">
-        
-        
-        <a href="https://github.com/qixa/hexo-theme-fluid-mod/blob/master/Changelog.md" target="_blank" rel="noopener">
-          <h5 class="card-title link-card-title">Fluid Changelog</h5>
-          <p class="card-text link-card-text">主题更新日志</p>
-        </a>
-      </div>
-    </div>
-  
-</div>
-
-<!-- Comments -->
-<div class="col-lg-12 mx-auto nopadding-md">
-  <div class="container comments mx-auto" id="comments">
-    
-      <br><br>
-      
-      <div class="disqus" style="width:100%">
-  <div id="disqus_thread">
-    <div id="disqus_loading" style="width: 100%; margin: 0 auto 0 auto; text-align: center;">
-      <button type="button" class="btn btn-primary disqus_click_btn" onclick="reload_disqus();">点击加载评论</button>
-    </div>
-  </div>
-  <script type="text/javascript">
-	/*Disqus 评论框*/
-	var recheckDQ = function () {
-		if($('#disqus_thread').length) {
-			var xhr = new XMLHttpRequest();
-			xhr.open('GET', '//disqus.com/next/config.json?' + new Date().getTime(), true);
-			xhr.timeout = 3000;
-			xhr.onreadystatechange = function () {
-				if (xhr.readyState == 4 && xhr.status == 200) {
-					/*加载 Disqus 评论框*/
-					if(window.DISQUS) {
-						DISQUS.reset({
-						reload: true
-						});
-					} else {
-						/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-						var disqus_shortname = '';
-						
-						/* * * DON'T EDIT BELOW THIS LINE * * */
-             			var disqus_config = function () {
-							 this.page.url = "http://lothengriol.com/links/index.html";
-							 this.page.identifier = "links/index.html"; 
-							 this.page.title = "友链";
-             			};
-             			(function () {
-							 var d = document, s = d.createElement('script');
-               				 s.type = 'text/javascript';
-               				 s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-               				 s.setAttribute('data-timestamp', +new Date());
-               				 (d.head || d.body).appendChild(s);
-             			})();
-					}
-				}
-			}
-			xhr.ontimeout = function () {
-				xhr.abort();
-        /*加载自制评论框*/
-        document.getElementById('disqus_loading').style.display = "block";
-				document.getElementById('disqus_loading').innerHTML = '<button type="button" class="btn btn-primary disqus_click_btn" onclick="reload_disqus();">点击重新加载评论</button><div class="col-lg-6 mx-auto nopadding-md" style="padding-top:10px;"><p>如果长时间无法加载，请针对 disq.us | disquscdn.com | disqus.com 启用代理</p></div>';
-			}
-			xhr.onerror = function() {
-        /*加载自制评论框*/
-        document.getElementById('disqus_loading').style.display = "block";
-				document.getElementById('disqus_loading').innerHTML = '<button type="button" class="btn btn-primary disqus_click_btn" onclick="reload_disqus();">点击重新加载评论</button><div class="col-lg-6 mx-auto nopadding-md" style="padding-top:10px;"><p>如果长时间无法加载，请针对 disq.us | disquscdn.com | disqus.com 启用代理</p></div>';
-			}
-			xhr.send(null);
-		}
-	}
-	/*异步加载评论框*/
-	$(document).ready(function(){
-  		if(document.getElementById('disqus_thread')) {
-    		recheckDQ();
-  		}
-	});
-	/*重载评论框*/
-	var reload_disqus = function () {
-  		recheckDQ();
-  		$('#disqus_loading').css('display','none');
-	}
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" target="_blank" rel="nofollow noopener noopener">comments
-      powered by Disqus.</a></noscript>
-</div>
-    
-  </div>
-</div>
-
               </div>
             </div>
           </div>
@@ -274,19 +158,19 @@
     </div>
     <div class="text-center sidebar-about">
       <p class="h3 sidebar-author">水乐之岩</p>
-      <p class="sidebar-subtitle"></p>
+      <p class="sidebar-subtitle">平原上，刚多林城沐浴着玫瑰色的曙光，应答的号角自洁白的城墙上传来，遥远却清晰。</p>
       
-        <a href="https://github.com" class="h4" target="_blank">
+        <a href="https://github.com/Ecthelion-F/" class="h4" target="_blank">
           <i class="fab fa-github" aria-hidden="true"></i>
         </a>
         &nbsp;&nbsp;
       
-        <a href="https://twitter.com" class="h4" target="_blank">
-          <i class="fab fa-twitter" aria-hidden="true"></i>
+        <a href="http://www.popiask.cn/telperion" class="h4" target="_blank">
+          <i class="fa fa-question" aria-hidden="true"></i>
         </a>
         &nbsp;&nbsp;
       
-        <a href="mailto:example@example.com" class="h4" target="_blank">
+        <a href="mailto:i@lothengriol.com" class="h4" target="_blank">
           <i class="fas fa-envelope" aria-hidden="true"></i>
         </a>
         &nbsp;&nbsp;
@@ -298,13 +182,6 @@
         <span class="sidebar-label">友情链接</span>
       </p>
       <ul class="list-group">
-        
-          <a href="https://example.com/" target="_blank">
-            <li class="list-group-item">
-              <i class="fas fa-quote-left"></i>&nbsp;
-              friendname
-            </li>
-          </a>
         
     </ul>
     </div>
