@@ -13,7 +13,7 @@ body a {
   color: #3c4858;
 }
 body a:hover {
-  color: #2e279d;
+  color: #fe4365;
 }
 .hover-with-bg {
   display: inline-block;
@@ -79,10 +79,10 @@ body a:hover {
   color: white;
 }
 .top-nav-collapse {
-  background-color: #46b5d1;
+  background-color: #fc9d9a;
 }
 .navbar-col-show {
-  background-color: #46b5d1;
+  background-color: #fc9d9a;
 }
 @media (max-width: 768px) {
   .navbar {
@@ -328,7 +328,7 @@ a.police-beian img {
   transition: all 0.2s ease-in-out;
 }
 .sidebar-button:hover {
-  color: #2e279d;
+  color: #fe4365;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -448,15 +448,15 @@ footer a {
   color: #ffffff;
 }
 footer a:hover {
-  color: #151965;
+  color: #fe4365;
 }
 footer .iconfont {
   color: #fc9d9a;
   text-shadow: 0.1rem 0.1rem 0.5rem #ffffff;
 }
 .footer-theme a {
-  color: #32407b;
-  text-shadow: 0.1rem 0.1rem 0.2rem #32407b;
+  color: #fc9d9a;
+  text-shadow: 0.1rem 0.1rem 0.2rem #fe4365;
 }
 .footer-hitokoto {
   max-width: 50rem;
@@ -480,14 +480,14 @@ footer .iconfont {
 #runtime:hover,
 #busuanzi_value_site_pv:hover,
 #busuanzi_value_site_uv:hover {
-  color: #151965;
+  color: #fe4365;
   text-shadow: 0.1rem 0.1rem 0.5rem white;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 ::-webkit-scrollbar {
-  background-color: #dff6f0;
+  background-color: #fec9c9;
   width: 10px;
   height: 10px;
   background-clip: padding-box;
@@ -496,12 +496,12 @@ footer .iconfont {
   display: none;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #46b3e6;
+  background-color: #fe4365;
   border-radius: 5px;
   background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,0.2) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, transparent 75%, transparent);
 }
 ::-webkit-scrollbar-corner {
-  background-color: #46b3e6;
+  background-color: #fe4365;
 }
 @-moz-keyframes scroll-down {
   0% {
@@ -716,7 +716,7 @@ h6::before {
   height: calc(100% - 9rem);
 }
 #toc p {
-  color: #ffffff;
+  color: #3c4858;
 }
 #tocbot {
   max-height: 100%;
@@ -740,13 +740,13 @@ h6::before {
   font-size: 15px;
 }
 .tocbot-link {
-  color: #ffffff;
+  color: #3c4858;
   text-shadow: 0.1em 0.1em 0.2em #ffffff;
 }
 .tocbot-active-link {
   font-weight: 600;
-  color: #297ca0;
-  text-shadow: 0.1em 0.1em 0.2em #297ca0;
+  color: #1abc9c;
+  text-shadow: 0.1em 0.1em 0.2em #ffbcbc;
 }
 .tocbot-is-collapsible {
   max-height: 1000px;
@@ -815,5 +815,5 @@ h6::before {
   font-weight: 350;
 }
 .tagcloud a:hover {
-  color: #2e279d !important;
+  color: #fe4365 !important;
 }

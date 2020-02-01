@@ -4,8 +4,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="/img/avatar.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/water.png">
+  <link rel="icon" type="image/png" href="/img/water.png">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -269,7 +269,7 @@ More info: Deployment
   <div class="sidebar-overlay"></div>
   <div class="sidebar-intrude">
     <div class="sidebar-avatar">
-      <img src="/img/avatar.png" srcset="/img/avatar.png" alt="avatar"/>
+      <img src="/img/avatar.jpg" srcset="/img/avatar.jpg" alt="avatar"/>
     </div>
     <div class="text-center sidebar-about">
       <p class="h3 sidebar-author">水乐之岩</p>
@@ -280,7 +280,7 @@ More info: Deployment
         </a>
         &nbsp;&nbsp;
       
-        <a href="http://www.popiask.cn/telperion" class="h4" target="_blank">
+        <a href="http://www.popiask.cn/XVcXVN" class="h4" target="_blank">
           <i class="fa fa-question" aria-hidden="true"></i>
         </a>
         &nbsp;&nbsp;
@@ -345,6 +345,11 @@ More info: Deployment
           ©2020&nbsp;Telperion
         
         
+          
+            <i class="iconfont icon-love"></i>
+          
+          <span>萌萌哒<span id="runtime"></span>天啦</span>
+        
       </div>
     
 
@@ -356,12 +361,6 @@ More info: Deployment
               被瞅了<span id="busuanzi_value_site_pv"></span>次
           </span>
         
-        
-          <!-- 不蒜子统计UV -->
-          <span id="busuanzi_container_site_uv" style="display:none">
-            |
-            被<span id="busuanzi_value_site_uv"></span>人看爆
-          </span>
         
       </div>
     
@@ -387,7 +386,7 @@ More info: Deployment
   <script src="/lib/prettify/prettify.min.js" ></script>
   <script type="text/javascript">
     $(document).ready(function () {
-      $('pre').addClass('prettyprint  ');
+      $('pre').addClass('prettyprint  linenums');
       prettyPrint();
     })
   </script>
@@ -490,6 +489,22 @@ More info: Deployment
   });
   
 </script>
+
+  <script type="text/javascript">
+    /*显示博客运行时间*/
+    var blogRunTime = function () {
+      var runTime = document.getElementById("runtime");
+      var runtimeDate = "2020,01,31";
+	    var createDate = new Date(runtimeDate);
+	    var nowDate = new Date();
+	    var dateLine = nowDate.getTime() - createDate.getTime();
+	    var runDate = Math.floor(dateLine / (1000 * 60 * 60 * 24));
+	    runTime.innerHTML = runDate;
+    };
+    $(document).ready(function(){
+	    blogRunTime();
+    });
+  </script>
 
 
   <script type="text/javascript">
