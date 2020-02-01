@@ -4,21 +4,23 @@
   
   
   <entry>
-    <title>testworld</title>
-    <link href="/2020/p145655/"/>
-    <url>/2020/p145655/</url>
+    <title>Latex使用label出现引用未定义</title>
+    <link href="/2020/p195218/"/>
+    <url>/2020/p195218/</url>
     
-    <content type="html"><![CDATA[<h2 id="hello-world"><a href="#hello-world" class="headerlink" title="hello world"></a>hello world</h2><p>A quick brown fox jumped over a lazy dog.</p><p>A QUICK BROWN FOX JUMPED OVER A LAZY DOG.</p><p>狐狸跳狗乱数假文。</p><p><a href="">baidu.com</a></p><ul><li>fuck</li><li>test</li></ul><pre><code class="lang-c++">#include&lt;cstdio&gt;using namespace std;int main(){    printf(&quot;hello world!&quot;);    return 0;}</code></pre><script type="math/tex; mode=display">\int\frac{1}{x}=\ln x+C</script>]]></content>
+    <content type="html"><![CDATA[<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>在用LaTeX制作物理实验报告模板，需要对图表做交叉引用，使用<code>\label{xx}</code>定义标签再使用<code>\ref{xx}</code>出现了”reference xx on page xxx undefined”的warning，同时生成的PDF文件中引用处仅出现??</p><h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><p>需要文本使用UTF-8编码才能识别，将文档开始的</p><pre><code class="lang-latex">\documentclass{ctexart}</code></pre><p>改为</p><pre><code class="lang-latex">\documentclass[UTF8]{ctexart}</code></pre><p>重新编译即可</p>]]></content>
     
+    
+    <categories>
+      
+      <category>LaTeX</category>
+      
+    </categories>
     
     
     <tags>
       
-      <tag>Math</tag>
-      
       <tag>LaTeX</tag>
-      
-      <tag>Test</tag>
       
     </tags>
     

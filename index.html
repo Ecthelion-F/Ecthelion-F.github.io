@@ -147,56 +147,49 @@
     
       
       <div class="col-12 col-md-4 m-auto">
-        <a href="/2020/p145655/" target="_self">
-          <img src="https://s2.ax1x.com/2020/01/31/13LioF.jpg" alt="testworld" class="img-fluid rounded z-depth-3 index-thumbnails image_random">
+        <a href="/2020/p195218/" target="_self">
+          <img src="https://s2.ax1x.com/2020/01/31/13LioF.jpg" alt="Latex使用label出现引用未定义" class="img-fluid rounded z-depth-3 index-thumbnails image_random">
         </a>
       </div>
       
       <div class="col-12 col-md-8 m-auto">
     
-      <a href="/2020/p145655/" target="_self">
-        <p class="h4 index-header">testworld</p>
+      <a href="/2020/p195218/" target="_self">
+        <p class="h4 index-header">Latex使用label出现引用未定义</p>
         
         
           
         
         <div class="index-excerpt" >
-          <div class="index-text mb-1">hello worldA quick brown fox jumped over a lazy dog.
-A QUICK BROWN FOX JUMPED OVER A LAZY DOG.
-狐狸跳狗乱数假文。
-baidu.com
+          <div class="index-text mb-1">问题在用LaTeX制作物理实验报告模板，需要对图表做交叉引用，使用\label{xx}定义标签再使用\ref{xx}出现了”reference xx on page xxx undefined”的warning，同时生成的PDF文件中引用处仅出现??
+解决方法需要文本使用UTF-8编码才能识别，将文档开始的
+\documentclass{ctexart}
 
-fuck
-test
+改为
+\documentclass[UTF8]{ctexart}
 
-#include&lt;cstdio&gt;
-using namespace std;
-int main(){
-    printf(&quot;hello world!&quot;);
-    return 0;
-}
-
-
-\int\frac{1}{x}=\ln x+C</div>
+重新编译即可
+</div>
         </div>
       </a>
       <div>
         
-          <i class="iconfont icon-riqi2"></i>&nbsp;2020-01-31&nbsp;&nbsp;
+          <i class="iconfont icon-riqi2"></i>&nbsp;2020-02-01&nbsp;&nbsp;
         
         
-        <i class="far fa-chart-bar"></i>&nbsp;54字&nbsp;&nbsp;
+        <i class="far fa-chart-bar"></i>&nbsp;101字&nbsp;&nbsp;
         <i class="far fa-clock"></i>&nbsp;1分钟&nbsp;&nbsp;
         
+        
+          <i class="iconfont icon-inbox"></i>
+          
+            <a href="/categories/LaTeX">LaTeX</a>&nbsp;
+          &nbsp;
         
         
           <i class="iconfont icon-tag"></i>
           
-            <a href="/tags/Math">Math</a>&nbsp;
-          
             <a href="/tags/LaTeX">LaTeX</a>&nbsp;
-          
-            <a href="/tags/Test">Test</a>&nbsp;
           
         
       </div>
