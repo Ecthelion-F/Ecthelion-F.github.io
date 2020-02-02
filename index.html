@@ -147,6 +147,63 @@
     
       
       <div class="col-12 col-md-4 m-auto">
+        <a href="/2020/p175540/" target="_self">
+          <img src="https://s2.ax1x.com/2020/01/31/13LioF.jpg" alt="git将一个项目推送到多个仓库" class="img-fluid rounded z-depth-3 index-thumbnails image_random">
+        </a>
+      </div>
+      
+      <div class="col-12 col-md-8 m-auto">
+    
+      <a href="/2020/p175540/" target="_self">
+        <p class="h4 index-header">git将一个项目推送到多个仓库</p>
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">在写物理实验报告模板的时候因为我们这边GitHub被墙了，希望能在国内的代码托管平台再保存一份，以后更新也能同时push到两个仓库方便抢救不会用梯子的室友，遂Google，果然前人已经想到了问题准备好了解决方案，只要能够准确的提出问题(:з」∠)
+
+现在把个人认为比较方便的解决方案记录如下
+解决方案假设我们已经将项目优雅的放在了github，在本地仓库执行
+git remote -v
+可以看到现有的远程仓库地址
+origin  https://github.com/Ecthelion-F/ExpReportTemplate.git (fetch)
+origin  https://github.com/Ecthelion-F/ExpReportTemplate.git (push)
+接下来将新平台的地址加入，这里我用的coding
+git remote set-url --add origin https://e.coding.net/asdjklz4/ExpReportTemplate.git
+回车，然后重新push即可，以后push的时候也会同时推到两个平台，非常方便√
+</div>
+        </div>
+      </a>
+      <div>
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2020-02-02&nbsp;&nbsp;
+        
+        
+        <i class="far fa-chart-bar"></i>&nbsp;241字&nbsp;&nbsp;
+        <i class="far fa-clock"></i>&nbsp;1分钟&nbsp;&nbsp;
+        
+        
+          <i class="iconfont icon-inbox"></i>
+          
+            <a href="/categories/Git">Git</a>&nbsp;
+          &nbsp;
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/Git">Git</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4 mx-auto">
+    
+    
+      
+      <div class="col-12 col-md-4 m-auto">
         <a href="/2020/p195218/" target="_self">
           <img src="https://s2.ax1x.com/2020/01/31/13LioF.jpg" alt="Latex使用label出现引用未定义" class="img-fluid rounded z-depth-3 index-thumbnails image_random">
         </a>

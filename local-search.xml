@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>git将一个项目推送到多个仓库</title>
+    <link href="/2020/p175540/"/>
+    <url>/2020/p175540/</url>
+    
+    <content type="html"><![CDATA[<p>在写<a href="https://github.com/Ecthelion-F/ExpReportTemplate" target="_blank" rel="noopener">物理实验报告模板</a>的时候因为我们这边GitHub被墙了，希望能在国内的代码托管平台再保存一份，以后更新也能同时push到两个仓库<del>方便抢救不会用梯子的室友</del>，遂Google，果然前人已经想到了问题准备好了解决方案，只要能够准确的提出问题<em>(:з」∠)</em></p><p><img src="https://s2.ax1x.com/2020/02/02/1Y2Y6O.png" srcset="/img/loading.gif" alt="1Y2Y6O.png"></p><p>现在把个人认为比较方便的解决方案记录如下</p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>假设我们已经将项目优雅的放在了github，在本地仓库执行</p><pre><code>git remote -v</code></pre><p>可以看到现有的远程仓库地址</p><pre><code>origin  https://github.com/Ecthelion-F/ExpReportTemplate.git (fetch)origin  https://github.com/Ecthelion-F/ExpReportTemplate.git (push)</code></pre><p>接下来将新平台的地址加入，这里我用的coding</p><pre><code>git remote set-url --add origin https://e.coding.net/asdjklz4/ExpReportTemplate.git</code></pre><p>回车，然后重新<code>push</code>即可，以后<code>push</code>的时候也会同时推到两个平台，非常方便√</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Git</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Latex使用label出现引用未定义</title>
     <link href="/2020/p195218/"/>
     <url>/2020/p195218/</url>
