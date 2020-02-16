@@ -160,10 +160,10 @@
           <div class="markdown-body">
             <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>在用LaTeX制作物理实验报告模板，需要对图表做交叉引用，使用<code>\label{xx}</code>定义标签再使用<code>\ref{xx}</code>出现了”reference xx on page xxx undefined”的warning，同时生成的PDF文件中引用处仅出现??</p>
 <h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><p>需要文本使用UTF-8编码才能识别，将文档开始的</p>
-<pre><code class="lang-latex">\documentclass{ctexart}
+<pre><code class="lang-tex">\documentclass{ctexart}
 </code></pre>
 <p>改为</p>
-<pre><code class="lang-latex">\documentclass[UTF8]{ctexart}
+<pre><code class="lang-tex">\documentclass[UTF8]{ctexart}
 </code></pre>
 <p>重新编译即可</p>
 <h1 id="补充记录"><a href="#补充记录" class="headerlink" title="补充记录"></a>补充记录</h1><ul>
