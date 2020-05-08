@@ -13,11 +13,11 @@
   <meta name="author" content="Telperion">
   
   
-    <meta name="keywords" content="Git," />
+    <meta name="keywords" content="STL,C++," />
   
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
-  <title>git将一个项目推送到多个仓库 | 水乐之岩</title>
+  <title>C++STL仿函数简单应用 | 水乐之岩</title>
   <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.10.0/css/all.min.css"  >
 <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"  >
 <link rel="stylesheet" href="https://cdn.staticfile.org/mdbootstrap/4.8.7/css/mdb.min.css"  >
@@ -127,9 +127,9 @@
               <br>
               <p class="mt-3">
                 <i class="far fa-calendar-alt"></i>
-                <span class="post-date">2020-02-02&nbsp;|&nbsp;</span>
+                <span class="post-date">2020-05-08&nbsp;|&nbsp;</span>
                 <i class="far fa-chart-bar"></i>
-                <span class="post-count">241</span>字&nbsp;|&nbsp;
+                <span class="post-count">333</span>字&nbsp;|&nbsp;
                 <i class="far fa-clock"></i>
                 <span class="post-count">1</span>分钟
                 
@@ -158,17 +158,27 @@
       <div class="py-5 z-depth-3" id="board">
         <div class="post-content mx-auto" id="post">
           <div class="markdown-body">
-            <p>在写<a href="https://github.com/Ecthelion-F/ExpReportTemplate" target="_blank" rel="noopener">物理实验报告模板</a>的时候因为我们这边GitHub被墙了，希望能在国内的代码托管平台再保存一份，以后更新也能同时push到两个仓库<del>方便抢救不会用梯子的室友</del>，遂Google，果然前人已经想到了问题准备好了解决方案，只要能够准确的提出问题<em>(:з」∠)</em></p>
-<p><img src="https://s2.ax1x.com/2020/02/02/1Y2Y6O.png" srcset="/img/loading.gif" alt="1Y2Y6O.png"></p>
-<p>现在把个人认为比较方便的解决方案记录如下</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>假设我们已经将项目优雅的放在了github，在本地仓库执行</p>
-<pre><code>git remote -v
-</code></pre><p>可以看到现有的远程仓库地址</p>
-<pre><code>origin  https://github.com/Ecthelion-F/ExpReportTemplate.git (fetch)
-origin  https://github.com/Ecthelion-F/ExpReportTemplate.git (push)
-</code></pre><p>接下来将新平台的地址加入，这里我用的coding</p>
-<pre><code>git remote set-url --add origin https://e.coding.net/asdjklz4/ExpReportTemplate.git
-</code></pre><p>回车，然后重新<code>push</code>即可，以后<code>push</code>的时候也会同时推到两个平台，非常方便√</p>
+            <p>在写<a href="https://github.com/Ecthelion-F/DS-Algorithm/blob/master/Graph/ShortestPath/Dijkstra_template.cpp" target="_blank" rel="noopener">堆优化的Dijkstra模板</a>的时候用到了 STL 的<code>priority_queue</code>，队列中压入了自定义的结构体，需要重载运算符利用仿函数实现比较，鉴于自己太菜<del>既没有查到也</del>记不住原理，只好暴力记录用法待查。</p>
+<h2 id="重载运算符方法"><a href="#重载运算符方法" class="headerlink" title="重载运算符方法"></a>重载运算符方法</h2><p>这种方法在定义的结构体中重载运算符来实现大/小根堆，缺点似乎是没法混合生成大根堆和小根堆….？</p>
+<pre><code class="lang-c++">//自定义的结构体，以len作为比较关键字
+struct Node{
+    int pos;
+    int len;
+    bool operator &lt;( const Node &amp;x )const{ //这里是重载的运算符
+        return x.len &lt; len;//产生小根堆
+    }
+};
+priority_queue&lt;Node&gt; s;
+</code></pre>
+<h3 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h3><p>一直重载小于号运算符，接收到的参数有根的性质，小根堆就让参数在小侧，大根堆就让参数在大侧</p>
+<h2 id="在sort-函数中应用"><a href="#在sort-函数中应用" class="headerlink" title="在sort()函数中应用"></a>在sort()函数中应用</h2><p>比较通用的办法是实现一个比较函数<code>cmp</code>作为<code>sort()</code>的第三个参数传入</p>
+<pre><code class="lang-c++">bool cmp(Node &amp;a, Node &amp;b){return a.len&gt;b.len}
+sort(s, s+n, cmp);
+</code></pre>
+<h3 id="食用方法-1"><a href="#食用方法-1" class="headerlink" title="食用方法"></a>食用方法</h3><ul>
+<li>接收两个参数按顺序排列，降序用大于升序用小于</li>
+<li>另外重载运算符的食用姿势也可以，<del>怎么理解我想不明白决定先老老实实用<code>cmp</code></del></li>
+</ul>
 
             <hr>
           </div>
@@ -179,7 +189,7 @@ origin  https://github.com/Ecthelion-F/ExpReportTemplate.git (push)
                 <span>
                   <i class="iconfont icon-inbox"></i>
                   
-                    <a class="hover-with-bg" href="/categories/Git">Git</a>
+                    <a class="hover-with-bg" href="/categories/C++">C++</a>
                     &nbsp;
                   
                 </span>
@@ -187,14 +197,16 @@ origin  https://github.com/Ecthelion-F/ExpReportTemplate.git (push)
               <span>
                 <i class="iconfont icon-tag"></i>
                 
-                  <a class="hover-with-bg" href="/tags/Git">Git</a>
+                  <a class="hover-with-bg" href="/tags/STL">STL</a>
+                
+                  <a class="hover-with-bg" href="/tags/C++">C++</a>
                 
               </span>
             </div>
             
               <div id="post-note">
                 <div><strong>本文作者：</strong><a href="/">维林诺的银树Telperion</a></div>
-                <div><strong>本文链接：</strong><a href="http://lothengriol.com/2020/p175540/">http://lothengriol.com/2020/p175540/</a></div>
+                <div><strong>本文链接：</strong><a href="http://lothengriol.com/2020/p203318/">http://lothengriol.com/2020/p203318/</a></div>
                 <div><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用 <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0 CN</a> 协议进行许可。转载请注明出处！</div>
               </div>
             
@@ -202,14 +214,9 @@ origin  https://github.com/Ecthelion-F/ExpReportTemplate.git (push)
               <div id="post-nav" class="container">
                   <div class="row">
                     
-                      <a href="/2020/p203318/" id="post-nav-prev" class="col">
-                        <i class="fas fa-arrow-left"></i>
-                        <span class="post-nav-title">C++STL仿函数简单应用</span>
-                      </a>
                     
-                    
-                      <a href="/2020/p195218/" id="post-nav-next" class="col">
-                        <span class="post-nav-title">Latex使用label出现引用未定义</span>
+                      <a href="/2020/p175540/" id="post-nav-next" class="col">
+                        <span class="post-nav-title">git将一个项目推送到多个仓库</span>
                         <i class="fas fa-arrow-right"></i>
                       </a>
                     
@@ -397,7 +404,7 @@ origin  https://github.com/Ecthelion-F/ExpReportTemplate.git (push)
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "git将一个项目推送到多个仓库&nbsp;",
+        "C++STL仿函数简单应用&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,

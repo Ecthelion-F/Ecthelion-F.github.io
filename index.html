@@ -147,6 +147,68 @@
     
       
       <div class="col-12 col-md-4 m-auto">
+        <a href="/2020/p203318/" target="_self">
+          <img src="https://s2.ax1x.com/2020/01/31/13LioF.jpg" alt="C++STL仿函数简单应用" class="img-fluid rounded z-depth-3 index-thumbnails image_random">
+        </a>
+      </div>
+      
+      <div class="col-12 col-md-8 m-auto">
+    
+      <a href="/2020/p203318/" target="_self">
+        <p class="h4 index-header">C++STL仿函数简单应用</p>
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">在写堆优化的Dijkstra模板的时候用到了 STL 的priority_queue，队列中压入了自定义的结构体，需要重载运算符利用仿函数实现比较，鉴于自己太菜既没有查到也记不住原理，只好暴力记录用法待查。
+重载运算符方法这种方法在定义的结构体中重载运算符来实现大/小根堆，缺点似乎是没法混合生成大根堆和小根堆….？
+//自定义的结构体，以len作为比较关键字
+struct Node{
+    int pos;
+    int len;
+    bool operator &lt;( const Node &amp;x )const{ //这里是重载的运算符
+        return x.len &lt; len;//产生小根堆
+    }
+};
+priority_queue&lt;Node&gt; s;
+
+食用方法一直重载小于号运算符，接收到的参数有根的性质，小根堆就让参数在小侧，大根堆就让参数在大侧
+在sort()函数中应用比较通用的办法是实现一个比较函数cmp作为sort()的第三个参数传入
+bool cmp(Node &amp;a, Node &amp;b){return a</div>
+        </div>
+      </a>
+      <div>
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2020-05-08&nbsp;&nbsp;
+        
+        
+        <i class="far fa-chart-bar"></i>&nbsp;333字&nbsp;&nbsp;
+        <i class="far fa-clock"></i>&nbsp;1分钟&nbsp;&nbsp;
+        
+        
+          <i class="iconfont icon-inbox"></i>
+          
+            <a href="/categories/C++">C++</a>&nbsp;
+          &nbsp;
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/STL">STL</a>&nbsp;
+          
+            <a href="/tags/C++">C++</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4 mx-auto">
+    
+    
+      
+      <div class="col-12 col-md-4 m-auto">
         <a href="/2020/p175540/" target="_self">
           <img src="https://s2.ax1x.com/2020/01/31/13LioF.jpg" alt="git将一个项目推送到多个仓库" class="img-fluid rounded z-depth-3 index-thumbnails image_random">
         </a>

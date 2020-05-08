@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>C++STL仿函数简单应用</title>
+    <link href="/2020/p203318/"/>
+    <url>/2020/p203318/</url>
+    
+    <content type="html"><![CDATA[<p>在写<a href="https://github.com/Ecthelion-F/DS-Algorithm/blob/master/Graph/ShortestPath/Dijkstra_template.cpp" target="_blank" rel="noopener">堆优化的Dijkstra模板</a>的时候用到了 STL 的<code>priority_queue</code>，队列中压入了自定义的结构体，需要重载运算符利用仿函数实现比较，鉴于自己太菜<del>既没有查到也</del>记不住原理，只好暴力记录用法待查。</p><h2 id="重载运算符方法"><a href="#重载运算符方法" class="headerlink" title="重载运算符方法"></a>重载运算符方法</h2><p>这种方法在定义的结构体中重载运算符来实现大/小根堆，缺点似乎是没法混合生成大根堆和小根堆….？</p><pre><code class="lang-c++">//自定义的结构体，以len作为比较关键字struct Node{    int pos;    int len;    bool operator &lt;( const Node &amp;x )const{ //这里是重载的运算符        return x.len &lt; len;//产生小根堆    }};priority_queue&lt;Node&gt; s;</code></pre><h3 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h3><p>一直重载小于号运算符，接收到的参数有根的性质，小根堆就让参数在小侧，大根堆就让参数在大侧</p><h2 id="在sort-函数中应用"><a href="#在sort-函数中应用" class="headerlink" title="在sort()函数中应用"></a>在sort()函数中应用</h2><p>比较通用的办法是实现一个比较函数<code>cmp</code>作为<code>sort()</code>的第三个参数传入</p><pre><code class="lang-c++">bool cmp(Node &amp;a, Node &amp;b){return a.len&gt;b.len}sort(s, s+n, cmp);</code></pre><h3 id="食用方法-1"><a href="#食用方法-1" class="headerlink" title="食用方法"></a>食用方法</h3><ul><li>接收两个参数按顺序排列，降序用大于升序用小于</li><li>另外重载运算符的食用姿势也可以，<del>怎么理解我想不明白决定先老老实实用<code>cmp</code></del></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>C++</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>STL</tag>
+      
+      <tag>C++</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>git将一个项目推送到多个仓库</title>
     <link href="/2020/p175540/"/>
     <url>/2020/p175540/</url>
